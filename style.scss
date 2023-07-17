@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+        &__container{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+                &:after{
+                    top: 100%;
+                    left: 15px;
+                    position: absolute;
+                    width:calc(100% - 30px);
+                    content: "";
+                    display: block;
+                    height: 2px;
+                    background: #BABBC5;
+                        }
+                    }
+        &__items{
+        display: flex;
+            }
+        &__item{
+    min-width: 112px;
+    list-style: none;
+    text-align: center;
+    }
+    &__link{
+        font-family: Raleway;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 35px 0 32px;
+        display: block;
+        border-bottom:3px solid transparent;
+        &:hover{
+            color: white;
+            border-bottom:3px solid #BABBC5;
+        }
+        &:active{
+            color:#E71414;
+            border-bottom:3px solid #E71414;
+        }
+    }
+}
+
+
+.banner {
+    background: url(assets/imgs/banner.png) top right / cover no-repeat;
+    padding: 158px 0 126px;
+    position: relative; 
+    margin-bottom:116 ;
+    background-size: cover;
+}
+.banner::before {
+    content: "";
+    background: #252B49;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 80%;
+}
+
+.banner__container {
+    position: relative;
+}
+
+.banner__title {
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 31px;
+    font-family: Raleway;
+    font-size: 64px;
+    line-height: 75px;
+    text-align: center;
+    font-weight: 900;
+}
+
+.banner__text {
+    color: #ffffff;
+    font-family: Raleway;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 79px;
+}
+
+.banner__btn {
+    font-family: "Raleway";
+    font-size: 24px;
+    line-height: 28px;
+    max-width: 370px;
+    width: 100%;
+    padding: 24px;
+    border: 2px solid #FF4343;;
+    color: #ffffff;
+    margin: 0 auto ;
+    display: block;
+    background-color: #FF4343;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.banner__btn:hover{
+    color: white;
+    background-color: #E71414;
+    border-color: #E71414;
+}
+
+.banner__btn:active{
+    color: white;
+    background-color: #FF4343;
+    border-color: #FF4343;
+    box-shadow: 4px 4px 30px 0px #FF4343;
+}
+
+.header__img{
+    position: relative;
+}
+
+
+.products{
+display: grid;
+grid-template-columns: repeat(4 , 1fr);
+}
+
+.product__title{
+    font-family: Raleway;
+font-size: 24px;
+font-weight: 900;
+line-height: 28px;
+letter-spacing: 0em;
+text-align: center;
+color: white;
+text-transform: uppercase;
+margin-bottom: 20px;
+}
+
+.product__description {
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+}
+
+.product{
+    aspect-ratio: 1;
+    display: flex;
+    position: relative;
+}
+
+.product__content{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 67, 67, 0.8);
+text-align: center;
+display: flex;flex-direction: column;
+justify-content: center;
+align-items: center;
+row-gap: 20px;
+opacity: 0;
+}
+
+.product__content:hover{
+    opacity: 100%;
+}
+
+.product__content:active{
+    background: rgba(185, 12, 12, 0.8);
+}
+
+.product__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
